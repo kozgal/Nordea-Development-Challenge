@@ -1,0 +1,18 @@
+<!-- Dette indhold bliver injectet i index.html-->
+<div class="pagename"> <!-- overskrift så du kan se hvilken side du er på -->
+  AppStore (all available apps)
+</div>
+<div class="screen"> <!-- denne div wrapper alle apps fra allApps arrayet -->
+  <div ng-repeat="app in allApps" class="appholder"> <!-- ng-repeat indsætter dette indhold for hvert element i allApps array -->
+    <div ng-click="addApp(app.id)" class="app" style="background-image: url('icons/{{app.id}}.png');"><!-- når en app bliver klikket på sendes en funktion via ng-click som også sender appens id som parameter. Derudover loader vi appens ikon ifht. dens id -->
+    </div>
+    <div class="appname">
+      {{app.name}} <!-- indsæt appens navn -->
+    </div>
+  </div>
+</div>
+<a href="#/"> <!-- home knappen skifter html injectionen tilbage til homescreen.html -->
+  <div class="homebutton">
+    HOME
+  </div>
+</a>

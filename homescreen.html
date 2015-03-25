@@ -1,0 +1,20 @@
+<!-- Dette indhold bliver injectet i index.html-->
+<div class="pagename"> <!-- overskrift så du kan se hvilken side du er på -->
+  Home Screen (only intalled apps)
+</div>
+<div class="screen"> <!-- denne div wrapper alle apps fra allApps arrayet -->
+  <div ng-repeat="app in homeApps track by $index" class="appholder"><!-- ng-repeat indsætter dette indhold for hvert element i allApps array. track by index sikrer at vi ikke får errors ved duplicate apps -->
+    <a href="{{app.link}}">
+      <div ng-click="showDelete()"class="app" style="background-image: url('icons/{{app.id}}.png');"><!-- når en app bliver klikket på sendes en funktion via ng-click som også sender appens id som parameter. Derudover loader vi appens ikon ifht. dens id -->
+        <div ng-show="showdelete"><!-- denne knap er usynlig indtil showDelete bliver kaldt -->
+          <div class="deletebutton" ng-click="deleteApp(app)"> <!-- kalder deleteApp og sender appen som parameter. Appen bliver slettet fra array i vores angular fil -->
+            Delete
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="appname">
+      {{app.name}} <!-- indsæt appens navn -->
+    </div>
+  </div>
+</div>
