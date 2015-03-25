@@ -1,5 +1,7 @@
 Navn: Frederik Petersson
 
+Note: appen bruger routing til at vise indhold. Dette kræver at appen befinder sig online for at virke. Hvis dette er et problem kan den tilgås fra mit personlige domæne: Pixellife.dk/nordea
+
 -app starter på home screen med en række standard apps.
 
 -klik på den gule "appstore" app loader appstore.
